@@ -1,0 +1,75 @@
+#days_hbox {
+	-fx-alignment: center;
+	-fx-background-color: linear-gradient(from 75px 75px to 450px 130px, rgb(98, 81, 253), rgb(64, 0, 128));
+}
+
+#days_hbox VBox {
+	-fx-alignment: center;
+}
+#days_hbox VBox Text {
+	-fx-fill: white;
+	-fx-font-size: 1.2em;
+	-fx-font-weight: bold;
+
+}
+
+
+#days_hbox VBox HBox {
+	-fx-alignment: center;
+	-fx-spacing: 10;
+}
+
+#weather_by_time_hbox {
+	-fx-background-color: linear-gradient(from 0% 0% to 50% 50%, reflect, rgb(64, 0, 128), rgb(185, 185, 0));
+	
+}
+
+#weather_by_time_hbox VBox {
+	-fx-alignment: center;
+}
+
+#weather_by_time_hbox VBox Text{
+	-fx-fill: white;
+	-fx-font-size: 1em;
+	-fx-font-weight: bold;
+}
+
+#center_pane {
+	-fx-background-image: url(images/backgrounds/day.jpg);
+	-fx-background-size: cover;
+	-fx-border-color:  rgb(64, 0, 128);
+	-fx-border-width: 4px;
+}
+
+#search_hbox{
+	-fx-alignment: center_left;
+}
+#search_hbox Button{
+	-fx-border-radius: 40%;
+}
+
+#location_text{
+	-fx-font-size: 1.5em;
+}
+
+#date_time_vbox {
+	-fx-alignment: top_center;
+	-fx-spacing: 10;
+}
+#date_time_vbox Text{
+	-fx-font-size: 1.5em;
+	-fx-fill: rgb(64, 0, 128);
+	-fx-font-weight: bold;
+}
+
+#weather_info_more VBox{
+	-fx-alignment: center;
+}
+
+#daily_main_temp{
+	-fx-font-size: 4.5em;
+	-fx-font-weight: bolder;
+	-fx-fill:white;
+	-fx-opacity: 90%;
+	
+}
