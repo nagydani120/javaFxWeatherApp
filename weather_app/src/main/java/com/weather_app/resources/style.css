@@ -73,6 +73,6 @@
 }
 
 .bordered {
-		-fx-border-color:  rgb(64.0, 0.0, 128.0);
+		-fx-border-color:  rgb(135, 205, 250.0);
 	-fx-border-width: 4.0px;
 }

@@ -34,7 +34,7 @@ public class WeatherAPIConnector {
 	public static final String DEFAULT_LOCATION;
 
 	static {
-		ResourceBundle bundle = ResourceBundle.getBundle("/com/weather_app/resources/api_data");
+		ResourceBundle bundle = ResourceBundle.getBundle("com/weather_app/resources/api_data");
 		
 		
 		API_KEY = bundle.getString("api_key");
