@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?scenebuilder-stylesheet style.css?>
+
+<HBox id="days_hbox" prefHeight="125.0" prefWidth="715.0"
+	BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/21"
+	xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+		<VBox fx:id="day0" prefHeight="200.0" prefWidth="100.0"
+			HBox.hgrow="ALWAYS">
+			<children>
+				<Text fx:id="day0Name" strokeType="OUTSIDE" strokeWidth="0.0" />
+				<ImageView fx:id="day0Icon" fitHeight="80.0"
+					fitWidth="114.0" pickOnBounds="true" preserveRatio="true" />
+				<HBox prefHeight="100.0" prefWidth="200.0">
+					<children>
+						<Text fx:id="day0Min" strokeType="OUTSIDE" strokeWidth="0.0" />
+						<Text fx:id="day0Max" strokeType="OUTSIDE" strokeWidth="0.0" />
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+		<VBox fx:id="day1" prefHeight="200.0" prefWidth="100.0"
+			HBox.hgrow="ALWAYS">
+			<children>
+				<Text fx:id="day1Name" strokeType="OUTSIDE" strokeWidth="0.0" />
+				<ImageView fx:id="day1Icon" fitHeight="80.0"
+					fitWidth="114.0" pickOnBounds="true" preserveRatio="true" />
+				<HBox prefHeight="100.0" prefWidth="200.0">
+					<children>
+						<Text fx:id="day1Min" strokeType="OUTSIDE" strokeWidth="0.0" />
+						<Text fx:id="day1Max" strokeType="OUTSIDE" strokeWidth="0.0" />
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+		<VBox fx:id="day2" prefHeight="200.0" prefWidth="100.0"
+			HBox.hgrow="ALWAYS">
+			<children>
+				<Text fx:id="day2Name" strokeType="OUTSIDE" strokeWidth="0.0" />
+				<ImageView fx:id="day2Icon" fitHeight="80.0"
+					fitWidth="114.0" pickOnBounds="true" preserveRatio="true" />
+				<HBox prefHeight="100.0" prefWidth="200.0">
+					<children>
+						<Text fx:id="day2Min" strokeType="OUTSIDE" strokeWidth="0.0" />
+						<Text fx:id="day2Max" strokeType="OUTSIDE" strokeWidth="0.0" />
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+		<VBox fx:id="day3" prefHeight="200.0" prefWidth="100.0"
+			HBox.hgrow="ALWAYS">
+			<children>
+				<Text fx:id="day3Name" strokeType="OUTSIDE" strokeWidth="0.0" />
+				<ImageView fx:id="day3Icon" fitHeight="80.0"
+					fitWidth="114.0" pickOnBounds="true" preserveRatio="true" />
+				<HBox prefHeight="100.0" prefWidth="200.0">
+					<children>
+						<Text fx:id="day3Min" strokeType="OUTSIDE" strokeWidth="0.0" />
+						<Text fx:id="day3Max" strokeType="OUTSIDE" strokeWidth="0.0" />
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+		<VBox fx:id="day4" prefHeight="200.0" prefWidth="100.0"
+			HBox.hgrow="ALWAYS">
+			<children>
+				<Text fx:id="day4Name" strokeType="OUTSIDE" strokeWidth="0.0" />
+				<ImageView fx:id="day4Icon" fitHeight="80.0"
+					fitWidth="114.0" pickOnBounds="true" preserveRatio="true" />
+				<HBox prefHeight="100.0" prefWidth="200.0">
+					<children>
+						<Text fx:id="day4Min" strokeType="OUTSIDE" strokeWidth="0.0" />
+						<Text fx:id="day4Max" strokeType="OUTSIDE" strokeWidth="0.0" />
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+		<VBox fx:id="day5" prefHeight="200.0" prefWidth="100.0"
+			HBox.hgrow="ALWAYS">
+			<children>
+				<Text fx:id="day5Name" strokeType="OUTSIDE" strokeWidth="0.0" />
+				<ImageView fx:id="day5Icon" fitHeight="80.0"
+					fitWidth="114.0" pickOnBounds="true" preserveRatio="true" />
+				<HBox prefHeight="100.0" prefWidth="200.0">
+					<children>
+						<Text fx:id="day5Min" strokeType="OUTSIDE" strokeWidth="0.0" />
+						<Text fx:id="day5Max" strokeType="OUTSIDE" strokeWidth="0.0" />
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+		<VBox fx:id="day6" prefHeight="200.0" prefWidth="100.0">
+			<children>
+				<Text fx:id="day6Name" strokeType="OUTSIDE" strokeWidth="0.0" />
+				<ImageView fx:id="day6Icon" fitHeight="80.0"
+					fitWidth="114.0" pickOnBounds="true" preserveRatio="true" />
+				<HBox prefHeight="100.0" prefWidth="200.0">
+					<children>
+						<Text fx:id="day6Min" strokeType="OUTSIDE" strokeWidth="0.0" />
+						<Text fx:id="day6Max" strokeType="OUTSIDE" strokeWidth="0.0" />
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+	</children>
+</HBox>

@@ -22,11 +22,6 @@
 			<version>21</version>
 		</dependency>
 		<dependency>
-			<groupId>org.openjfx</groupId>
-			<artifactId>javafx-web</artifactId>
-			<version>21</version>
-		</dependency>
-		<dependency>
 			<groupId>de.jensd</groupId>
 			<artifactId>fontawesomefx-fontawesome</artifactId>
 			<version>4.7.0-9.1.2</version>
@@ -56,7 +51,7 @@
 					<execution>
 						<id>default-cli</id>
 						<configuration>
-							<mainClass>com.weather_app.App</mainClass>
+							<mainClass>com.weather_app.MainTest</mainClass>
 						</configuration>
 					</execution>
 					<execution>
@@ -66,7 +61,7 @@
 								<option>
 									-agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address}</option>
 							</options>
-							<mainClass>com.weather_app.App</mainClass>
+							<mainClass>com.weather_app.MainTest</mainClass>
 						</configuration>
 					</execution>
 				</executions>

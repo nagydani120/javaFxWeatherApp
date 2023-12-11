@@ -1,4 +1,4 @@
-package com.weather_app;
+package com.weather_app.enums;
 
 public enum Moonphase {
 
@@ -13,19 +13,19 @@ public enum Moonphase {
 	}
 
 	public static Moonphase getMoonphase(double moonPhaseValue) {
-		if (moonPhaseValue < 12.5) {
+		if (moonPhaseValue < 0.125) {
 			return Moonphase.NEW;
-		} else if (moonPhaseValue < 25) {
+		} else if (moonPhaseValue < 0.25) {
 			return Moonphase.WAXING_CRESCENT;
-		} else if (moonPhaseValue < 37.5) {
+		} else if (moonPhaseValue < 0.375) {
 			return Moonphase.FIRST_QUARTER;
-		} else if (moonPhaseValue < 50) {
+		} else if (moonPhaseValue < 0.50) {
 			return Moonphase.WAXING_CRESCENT;
-		} else if (moonPhaseValue < 62.5) {
+		} else if (moonPhaseValue < 0.625) {
 			return Moonphase.FULL;
-		} else if (moonPhaseValue < 75) {
+		} else if (moonPhaseValue < 0.75) {
 			return Moonphase.WANING_GIBBOUS;
-		} else if (moonPhaseValue < 87.5) {
+		} else if (moonPhaseValue < 0.875) {
 			return Moonphase.LAST_QUARTER;
 		} else {
 			return Moonphase.WANING_CRESCENT;

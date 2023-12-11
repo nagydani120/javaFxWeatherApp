@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?scenebuilder-stylesheet style.css?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0"
+	prefWidth="715.0" xmlns="http://javafx.com/javafx/21"
+	xmlns:fx="http://javafx.com/fxml/1">
+	<!-- 
+	<top>
+		<fx:include source="top.fxml" />
+	</top>
+	<bottom>
+		<fx:include source="bottom.fxml" />
+	</bottom>
+	 -->
+	<center>
+		<BorderPane id="center_pane" prefHeight="200.0"
+			prefWidth="200.0" BorderPane.alignment="CENTER">
+			<top>
+				<HBox id="search_hbox" prefHeight="42.0" prefWidth="707.0"
+					BorderPane.alignment="CENTER">
+					<children>
+						<FontAwesomeIconView glyphName="SEARCH"
+							onMouseClicked="#search" size="20.0">
+							<HBox.margin>
+								<Insets left="20.0" />
+							</HBox.margin>
+						</FontAwesomeIconView>
+						<TextField id="search_hbox" fx:id="searchBar"
+							prefHeight="26.0" prefWidth="165.0">
+							<opaqueInsets>
+								<Insets />
+							</opaqueInsets>
+							<HBox.margin>
+								<Insets left="15.0" />
+							</HBox.margin>
+						</TextField>
+						<Text id="location_text" fx:id="location"
+							strokeType="OUTSIDE" strokeWidth="0.0" text="Slovakia, Europe"
+							textAlignment="RIGHT" wrappingWidth="448.0387283563614">
+							<HBox.margin>
+								<Insets left="10.0" />
+							</HBox.margin>
+						</Text>
+						<FontAwesomeIconView glyphName="MAP_MARKER"
+							size="22.0">
+							<HBox.margin>
+								<Insets left="10.0" />
+							</HBox.margin>
+						</FontAwesomeIconView>
+					</children>
+				</HBox>
+			</top>
+			<right>
+				<VBox id="date_time_vbox" prefHeight="231.0" prefWidth="133.0"
+					BorderPane.alignment="CENTER">
+					<children>
+						<Text fx:id="dayOfWeek" strokeType="OUTSIDE"
+							strokeWidth="0.0">
+							<VBox.margin>
+								<Insets top="25.0" />
+							</VBox.margin>
+						</Text>
+						<Text fx:id="time" strokeType="OUTSIDE" strokeWidth="0.0" />
+						<Text fx:id="date" strokeType="OUTSIDE" strokeWidth="0.0" />
+						<Text fx:id="timezone" strokeType="OUTSIDE" strokeWidth="0.0" />
+					</children>
+				</VBox>
+			</right>
+			<bottom>
+				<HBox id="weather_info_more" prefHeight="66.0"
+					prefWidth="707.0" BorderPane.alignment="CENTER">
+					<children>
+						<VBox prefHeight="80.0" prefWidth="57.0">
+							<children>
+								<ImageView fitHeight="46.0" fitWidth="50.0"
+									pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@images/icons/weather_marks/sunrise.png" />
+									</image>
+									<VBox.margin>
+										<Insets />
+									</VBox.margin>
+								</ImageView>
+								<Text fx:id="sunriseTime" strokeType="OUTSIDE"
+									strokeWidth="0.0" />
+							</children>
+							<HBox.margin>
+								<Insets left="150.0" />
+							</HBox.margin>
+						</VBox>
+						<VBox prefHeight="80.0" prefWidth="57.0">
+							<children>
+								<ImageView fitHeight="46.0" fitWidth="50.0"
+									pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@images/icons/weather_marks/sunset.png" />
+									</image>
+								</ImageView>
+								<Text fx:id="sunsetTime" strokeType="OUTSIDE"
+									strokeWidth="0.0" />
+							</children>
+						</VBox>
+						<VBox prefHeight="80.0" prefWidth="57.0">
+							<children>
+								<ImageView fitHeight="46.0" fitWidth="50.0"
+									pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@images/icons/weather_marks/moonphase.png" />
+									</image>
+								</ImageView>
+								<Text fx:id="moonphaseValue" strokeType="OUTSIDE"
+									strokeWidth="0.0" />
+								<Text fx:id="moonphaseText" strokeType="OUTSIDE"
+									strokeWidth="0.0" />
+							</children>
+							<HBox.margin>
+								<Insets left="130.0" />
+							</HBox.margin>
+						</VBox>
+					</children>
+					<opaqueInsets>
+						<Insets />
+					</opaqueInsets>
+				</HBox>
+			</bottom>
+			<center>
+				<GridPane BorderPane.alignment="CENTER">
+					<columnConstraints>
+						<ColumnConstraints halignment="CENTER"
+							hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0"
+							prefWidth="154.4000244140625" />
+						<ColumnConstraints hgrow="SOMETIMES"
+							maxWidth="164.0" minWidth="10.0" prefWidth="93.5999755859375" />
+						<ColumnConstraints hgrow="SOMETIMES"
+							maxWidth="109.00001220703126" minWidth="10.0"
+							prefWidth="97.80000000000001" />
+						<ColumnConstraints halignment="CENTER"
+							hgrow="SOMETIMES" maxWidth="142.4000244140625" minWidth="10.0"
+							prefWidth="124.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+						<RowConstraints minHeight="10.0" prefHeight="30.0"
+							vgrow="SOMETIMES" />
+					</rowConstraints>
+					<BorderPane.margin>
+						<Insets left="80.0" top="20.0" />
+					</BorderPane.margin>
+					<children>
+						<ImageView fitHeight="46.0" fitWidth="50.0"
+							pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
+							<image>
+								<Image url="@images/icons/weather_marks/wind.png" />
+							</image>
+						</ImageView>
+						<Text fx:id="windSpeedValue" strokeType="OUTSIDE"
+							strokeWidth="0.0" GridPane.rowIndex="4" />
+						<ImageView fitHeight="43.0" fitWidth="44.0"
+							pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@images/icons/weather_marks/uv.png" />
+							</image>
+						</ImageView>
+						<Text fx:id="uvIndexValue" strokeType="OUTSIDE"
+							strokeWidth="0.0" GridPane.rowIndex="1"
+							GridPane.valignment="BOTTOM" />
+						<ImageView fitHeight="48.0" fitWidth="48.0"
+							pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
+							<image>
+								<Image url="@images/icons/weather_marks/pressure.png" />
+							</image>
+						</ImageView>
+						<Text fx:id="pressureValue" strokeType="OUTSIDE"
+							strokeWidth="0.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+						<ImageView fitHeight="36.0" fitWidth="36.0"
+							pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3"
+							GridPane.rowIndex="3">
+							<image>
+								<Image url="@images/icons/weather_marks/humidity.png" />
+							</image>
+						</ImageView>
+						<Text fx:id="humidityValue" strokeType="OUTSIDE"
+							strokeWidth="0.0" GridPane.columnIndex="3" GridPane.rowIndex="4"
+							GridPane.valignment="BOTTOM" />
+						<StackPane prefHeight="150.0" prefWidth="206.0"
+							GridPane.columnIndex="1" GridPane.columnSpan="2"
+							GridPane.rowSpan="5">
+							<children>
+								<ImageView fx:id="actualWeatherIcon" fitHeight="150.0"
+									fitWidth="161.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@images/icons/weather_icons/cloudy.png" />
+									</image>
+								</ImageView>
+								<Text id="daily_main_temp" fx:id="actualTemp"
+									strokeType="OUTSIDE" strokeWidth="0.0"
+									StackPane.alignment="BOTTOM_CENTER" />
+							</children>
+						</StackPane>
+					</children>
+				</GridPane>
+			</center>
+		</BorderPane>
+	</center>
+</BorderPane>

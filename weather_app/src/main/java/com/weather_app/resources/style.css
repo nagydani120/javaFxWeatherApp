@@ -1,6 +1,6 @@
 #days_hbox {
 	-fx-alignment: center;
-	-fx-background-color: linear-gradient(from 75px 75px to 450px 130px, rgb(98, 81, 253), rgb(64, 0, 128));
+	-fx-background-color: linear-gradient(from 75.0px 75.0px to 450.0px 130.0px, rgb(98.0, 81.0, 253.0), rgb(64.0, 0.0, 128.0));
 }
 
 #days_hbox VBox {
@@ -13,14 +13,13 @@
 
 }
 
-
 #days_hbox VBox HBox {
 	-fx-alignment: center;
-	-fx-spacing: 10;
+	-fx-spacing: 10.0;
 }
 
 #weather_by_time_hbox {
-	-fx-background-color: linear-gradient(from 0% 0% to 50% 50%, reflect, rgb(64, 0, 128), rgb(185, 185, 0));
+	-fx-background-color: linear-gradient(from 0.0% 0.0% to 50.0% 50.0%, reflect, rgb(64.0, 0.0, 128.0), rgb(185.0, 185.0, 0.0));
 	
 }
 
@@ -30,22 +29,21 @@
 
 #weather_by_time_hbox VBox Text{
 	-fx-fill: white;
-	-fx-font-size: 1em;
+	-fx-font-size: 1.0em;
 	-fx-font-weight: bold;
 }
 
 #center_pane {
-	-fx-background-image: url(images/backgrounds/day.jpg);
-	-fx-background-size: cover;
-	-fx-border-color:  rgb(64, 0, 128);
-	-fx-border-width: 4px;
+	-fx-background-size: cover,auto;
+	-fx-border-color:  rgb(64.0, 0.0, 128.0);
+	-fx-border-width: 4.0px;
 }
 
 #search_hbox{
 	-fx-alignment: center_left;
 }
 #search_hbox Button{
-	-fx-border-radius: 40%;
+	-fx-border-radius: 40.0%;
 }
 
 #location_text{
@@ -54,11 +52,11 @@
 
 #date_time_vbox {
 	-fx-alignment: top_center;
-	-fx-spacing: 10;
+	-fx-spacing: 10.0;
 }
 #date_time_vbox Text{
 	-fx-font-size: 1.5em;
-	-fx-fill: rgb(64, 0, 128);
+	-fx-fill: rgb(64.0, 0.0, 128.0);
 	-fx-font-weight: bold;
 }
 
@@ -70,6 +68,11 @@
 	-fx-font-size: 4.5em;
 	-fx-font-weight: bolder;
 	-fx-fill:white;
-	-fx-opacity: 90%;
+	-fx-opacity: 90.0%;
 	
+}
+
+.bordered {
+		-fx-border-color:  rgb(64.0, 0.0, 128.0);
+	-fx-border-width: 4.0px;
 }

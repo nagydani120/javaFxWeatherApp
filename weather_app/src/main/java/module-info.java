@@ -1,7 +1,6 @@
 module com.weather_app {
 	requires javafx.controls;
 	requires javafx.fxml;
-	requires javafx.web;
 	requires java.net.http;
 	requires org.json;
 
@@ -9,4 +8,7 @@ module com.weather_app {
 	opens com.weather_app.controllers to javafx.fxml;
 
 	exports com.weather_app;
+	exports com.weather_app.controllers;
+	exports com.weather_app.weather_by_time;
+	exports com.weather_app.enums;
 }
