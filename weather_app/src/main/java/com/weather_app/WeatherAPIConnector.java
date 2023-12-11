@@ -11,30 +11,42 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.ResourceBundle;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.weather_app.enums.Condition;
-import com.weather_app.enums.Moonphase;
+import com.weather_app.exceptions.IllegalLocationException;
 import com.weather_app.weather_by_time.OneDayWeather;
 import com.weather_app.weather_by_time.OneHourWeather;
 import com.weather_app.weather_by_time.OneWeekWeather;
 
 public class WeatherAPIConnector {
-
-	private static final String API_KEY = "key=YGKGES5MQQACXJYER7BJVMB6D";
-	private static final String URL = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/";
-	private static final String CONTENT_TYPE = "contentType=json";
-	private static final String UNIT_GROUP = "unitGroup=metric";
+/**
+ *
+ */
+	private static final String API_KEY;
+	private static final String URL;
+	private static final String CONTENT_TYPE;
+	private static final String UNIT_GROUP;
+	private static final String TIME;
+	public static final String DEFAULT_LOCATION;
 
 	static {
+		ResourceBundle bundle = ResourceBundle.getBundle("/com/weather_app/resources/api_data");
+		
+		
+		API_KEY = bundle.getString("api_key");
+		URL = bundle.getString("url");
+		CONTENT_TYPE = bundle.getString("content_type");
+		UNIT_GROUP = bundle.getString("unit_group");
+		TIME = bundle.getString("time");
+		DEFAULT_LOCATION = bundle.getString("default_location");
 		// TODO : Make a .properties file to read resources
 	}
 
-	public static Search getSearch(String location) throws IllegalLocationException{
+	public static Search getSearch(String location) throws IllegalLocationException, NoResponseException {
 		Search search = new Search();
 		JSONObject result = getResult(location);
 
@@ -81,7 +93,8 @@ public class WeatherAPIConnector {
 			JSONArray hours = day.getJSONArray("hours");
 
 			ArrayList<OneHourWeather> hourlyWeatherFromJSON = getHourlyWeatherFromJSON(hours);
-			allDaysWeather.add(new OneDayWeather(dateTime, hourlyWeatherFromJSON, dayCondition, sunrise, sunset, moonphase));
+			allDaysWeather
+					.add(new OneDayWeather(dateTime, hourlyWeatherFromJSON, dayCondition, sunrise, sunset, moonphase));
 		}
 		return allDaysWeather;
 	}
@@ -107,11 +120,11 @@ public class WeatherAPIConnector {
 		return hoursList;
 	}
 
-	public static JSONObject getResult(String searchLocation) throws IllegalLocationException {
+	public static JSONObject getResult(String searchLocation) throws IllegalLocationException, NoResponseException {
 		HttpClient client = HttpClient.newHttpClient();
 		HttpRequest req = HttpRequest
 				.newBuilder(URI
-						.create(URL + searchLocation + "/next7days?" + UNIT_GROUP + "&" + API_KEY + "&" + CONTENT_TYPE))
+						.create(URL + searchLocation +"/" + TIME + UNIT_GROUP + "&" + API_KEY + "&" + CONTENT_TYPE))
 				.build();
 		HttpResponse<String> resp = null;
 		try {
@@ -119,12 +132,15 @@ public class WeatherAPIConnector {
 		} catch (IOException | InterruptedException e) {
 			e.printStackTrace();
 		}
+		if (resp == null) {
+			throw new NoResponseException();
+		}
 		if (resp.statusCode() == 400) {
 			throw new IllegalLocationException(searchLocation);
 		}
-		
-		
+
 		return new JSONObject(resp.body());
 	}
 
+	
 }

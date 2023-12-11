@@ -7,7 +7,6 @@ import java.util.stream.Collectors;
 
 import com.weather_app.Temperature;
 import com.weather_app.enums.Condition;
-import com.weather_app.enums.Moonphase;
 
 public class OneDayWeather {
 

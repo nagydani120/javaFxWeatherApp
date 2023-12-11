@@ -50,7 +50,7 @@
 							</HBox.margin>
 						</TextField>
 						<Text id="location_text" fx:id="location"
-							strokeType="OUTSIDE" strokeWidth="0.0" text="Slovakia, Europe"
+							strokeType="OUTSIDE" strokeWidth="0.0" text=""
 							textAlignment="RIGHT" wrappingWidth="448.0387283563614">
 							<HBox.margin>
 								<Insets left="10.0" />

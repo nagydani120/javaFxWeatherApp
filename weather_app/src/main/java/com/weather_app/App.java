@@ -14,7 +14,11 @@ public class App extends Application {
 	public void start(Stage stage) throws IOException {
 
 		ViewFactory.getView();
-		Model.upgradeViewOnSearch("bratislava");
+		Model.upgradeViewOnSearch(WeatherAPIConnector.DEFAULT_LOCATION);
+	}
+
+	@Override
+	public void init() throws Exception {
 	}
 
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.weather_app;
+package com.weather_app.exceptions;
 
 public class IllegalLocationException extends Exception {
 
