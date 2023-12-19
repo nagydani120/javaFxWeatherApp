@@ -18,6 +18,7 @@ import org.json.JSONObject;
 
 import com.weather_app.enums.Condition;
 import com.weather_app.exceptions.IllegalLocationException;
+import com.weather_app.exceptions.NoResponseException;
 import com.weather_app.weather_by_time.OneDayWeather;
 import com.weather_app.weather_by_time.OneHourWeather;
 import com.weather_app.weather_by_time.OneWeekWeather;

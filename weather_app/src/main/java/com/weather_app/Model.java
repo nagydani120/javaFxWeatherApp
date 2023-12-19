@@ -1,6 +1,7 @@
 package com.weather_app;
 
 import com.weather_app.exceptions.IllegalLocationException;
+import com.weather_app.exceptions.NoResponseException;
 import com.weather_app.weather_by_time.OneDayWeather;
 import com.weather_app.weather_by_time.OneWeekWeather;
 

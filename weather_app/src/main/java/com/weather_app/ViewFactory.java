@@ -63,6 +63,7 @@ public class ViewFactory {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		stage.setResizable(false);
 		stage.show();
 	
 	}
